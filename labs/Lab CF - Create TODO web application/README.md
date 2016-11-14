@@ -105,39 +105,3 @@ This step will erase your previous modifications, this is to show you how you ca
 
 1. Navigate to the **Getting Started** page of your application 
 2. Follow the steps, this will show how you can easily download the Hello World application to your computer, edit it locally and then push it back to Bluemix
-
-
-## Source code
-
-### Back-end
-
-| File | Description |
-| ---- | ----------- |
-|**package.json**|Lists the node.js dependencies|
-|**.cfignore**|List of files and directories ignored when calling **cf push**. Typically we ignore everything that can be retrieved with bower or npm. This speeds up the push process.|
-|**manifest.yml**|Used by Cloud Foundry when pushing the application to define the application environment, connected services, number of instances, etc.|
-|**app.js**|Web app backend entry point. It initializes the environment and imports the Todo API endpoints|
-|**todos.js**|Todo API implementation. It declares endpoints for PUT/GET/DELETE (create/retrieve/delete) and handles the *in-memory* storage.
-
-### Front-end
-
-| File | Description |
-| ---- | ----------- |
-|**.bowerrc**|Configuration file for the [bower](http://bower.io/) web package manager to put our web dependencies under public/vendor|
-|**bower.json**|Web dependencies (bootstrap, angular)|
-|**index.html**|Web front-end implementation. It displays the todo list and has a form to submit new todos.|
-|**todo.js**|Declares the Angular app|
-|**todo.service.js**|Implements the connection between the front-end and the back-end. It has methods to create/retrieve/delete Todos|
-|**todo.controller.js**|Controls the main view, loading the current todos and adding/removing todos by delegating to the Todo service|
-
-
-# Resources
-
-For additional resources pay close attention to the following:
-
-- [GitHub Guides](https://guides.github.com/)
-
-
-## Credits
-
-Based on [scotch-io/node-todo](https://github.com/scotch-io/node-todo)
